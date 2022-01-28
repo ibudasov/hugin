@@ -14,7 +14,7 @@
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "test": "jest && npm run test:mut",
+    "test": "npm run test:cov && npm run test:mut",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:mut": "npx stryker run",
@@ -45,6 +45,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.2.5",
+    "jest-coverage-guard": "^2.2.15",
     "prettier": "^2.3.2",
     "source-map-support": "^0.5.20",
     "stryker": "^0.35.1",
@@ -64,6 +65,10 @@
       "ts"
     ],
     "rootDir": "src",
+    "reporters": [
+      "default",
+      "jest-coverage-guard"
+    ],
     "testRegex": ".*\\.spec\\.ts$",
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
