@@ -7,6 +7,17 @@
     "clear-text",
     "progress"
   ],
+  "ignorePatterns": [
+    "dist",
+    "coverage",
+    "controller",
+    "controller.spec",
+    "module",
+    "spec",
+    "src/main.ts",
+    "src/app.service.ts",
+    "src/app.controller.ts"
+  ],
   "testRunner": "jest",
   "coverageAnalysis": "perTest"
 }
