@@ -14,7 +14,7 @@
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "test": "npm run test:cov && npm run test:mut",
+    "test": "npm run test:cov && npm run test:e2e && npm run test:mut",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:mut": "npx stryker run",
@@ -64,7 +64,7 @@
       "json",
       "ts"
     ],
-    "rootDir": "src/lead/domain",
+    "rootDir": "src/",
     "reporters": [
       "default",
       "jest-coverage-guard"
@@ -76,7 +76,7 @@
     "collectCoverageFrom": [
       "**/*.(t|j)s"
     ],
-    "coverageDirectory": "../../../../coverage",
+    "coverageDirectory": "../../coverage",
     "testEnvironment": "node"
   }
 }

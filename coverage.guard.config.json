@@ -12,7 +12,9 @@
   "excludeFiles": [
     "-test.js",
     ".less",
-    "main.ts"
+    "main.ts",
+    ".controller.ts",
+    ".module.ts"
   ],
   "addedFilesQualityGate": {
     "statements": 100,

@@ -9,8 +9,4 @@ export class Lead {
   get status(): LeadStatus {
     return this._status;
   }
-
-  ok(): string {
-    return "banaan";
-  }
 }
