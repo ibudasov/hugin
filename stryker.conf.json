@@ -19,5 +19,10 @@
     "src/app.controller.ts"
   ],
   "testRunner": "jest",
-  "coverageAnalysis": "perTest"
+  "coverageAnalysis": "perTest",
+  "thresholds": {
+    "high": 80,
+    "low": 60,
+    "break": 100
+  }
 }
