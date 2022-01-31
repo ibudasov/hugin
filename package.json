@@ -45,7 +45,6 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.2.5",
-    "jest-coverage-guard": "^2.2.15",
     "prettier": "^2.3.2",
     "source-map-support": "^0.5.20",
     "stryker": "^0.35.1",
@@ -66,12 +65,29 @@
     ],
     "rootDir": "src/",
     "reporters": [
-      "default",
-      "jest-coverage-guard"
+      "default"
     ],
     "testRegex": ".*\\.spec\\.ts$",
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": -10
+      },
+      "./src/main.ts": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0
+      },
+      "./src/**/*.module.ts": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0
+      }
     },
     "collectCoverageFrom": [
       "**/*.(t|j)s"
